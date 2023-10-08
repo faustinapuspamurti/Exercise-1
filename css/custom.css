@@ -33,14 +33,14 @@
 
 body{
     height: 100%;
-    background: linear-gradient(180deg, #c1d9ff 0%, rgba(255, 255, 255, 0.2) 100%);
+    background: #F1F0E8;
 }
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #343a40;
+    background-color: #96B6C5;
   }
 
   li {
@@ -56,7 +56,7 @@ ul {
   }
 
   #fotoDiri{
-      width: 80%
+      width: 70%
   }
 
   .deskripsi{
@@ -69,11 +69,11 @@ ul {
   }
 
   #footer-section {
-    padding-bottom: 5px;
-    padding-top: 5px;
+    padding-bottom: 15px;
+    padding-top: 15px;
     padding-right: 20px;
     padding-left: 20px;
-    background: #343a40;
+    background: #96B6C5;
     width: 100%;
     height: fit-content + 10px;
 }
@@ -92,6 +92,7 @@ th{
 
 .list-group-item{
     border: none;
+    background-color: #EEE0C9;
 }
 
 .checked {
@@ -99,4 +100,14 @@ th{
   }
 @media screen and (max-width: 900px) {
     
+}
+#foto {
+    width: 350px;
+    height: 200px;
+	margin-bottom: 5px;
+}
+#foto1 {
+    height: 350px;
+    width: 250px;
+	margin-bottom: 5px;
 }
