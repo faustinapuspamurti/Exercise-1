@@ -1,113 +1,213 @@
 /*sofia pro regular*/
 @font-face {
-    font-family: 'sofia_proregular';
-    src: url('sofia_pro_regular-webfont.woff2') format('woff2'),
+  font-family: 'sofia_proregular';
+  src: url('sofia_pro_regular-webfont.woff2') format('woff2'),
     url('sofia_pro_regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-weight: normal;
+  font-style: normal;
 }
+
 /*  */
 /*andika*/
 @font-face {
-    font-family: 'andika_new_basicregular';
-    src: url('andikanewbasic-r-webfont.woff2') format('woff2'),
+  font-family: 'andika_new_basicregular';
+  src: url('andikanewbasic-r-webfont.woff2') format('woff2'),
     url('andikanewbasic-r-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-weight: normal;
+  font-style: normal;
 
 }
 
 /*geomanist*/
 @font-face {
-    font-family: 'geomanistregular';
-    src: url('geomanist-regular-webfont.eot');
-    src: url('geomanist-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  font-family: 'geomanistregular';
+  src: url('geomanist-regular-webfont.eot');
+  src: url('geomanist-regular-webfont.eot?#iefix') format('embedded-opentype'),
     url('geomanist-regular-webfont.woff2') format('woff2'),
     url('geomanist-regular-webfont.woff') format('woff'),
     url('geomanist-regular-webfont.ttf') format('truetype'),
     url('geomanist-regular-webfont.svg#geomanistregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-weight: normal;
+  font-style: normal;
 
 }
 
-body{
-    height: 100%;
-    background: #F1F0E8;
+body {
+  height: 100%;
+  background: #F1F0E8;
 }
+
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #96B6C5;
-  }
-
-  li {
-    float: left;
-  }
-
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 0 16px 0 16px;
-    text-decoration: none;
-  }
-
-  #fotoDiri{
-      width: 70%
-  }
-
-  .deskripsi{
-      padding: 10px 0 0 0;
-      font-size: 20px;
-  }
-
-  .title-section{
-      text-align: center;
-  }
-
-  #footer-section {
-    padding-bottom: 15px;
-    padding-top: 15px;
-    padding-right: 20px;
-    padding-left: 20px;
-    background: #96B6C5;
-    width: 100%;
-    height: fit-content + 10px;
-}
-.list-inline-group{
-    text-align: center;
-    color: white;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-th{
-    text-align: center;
+li {
+  float: left;
 }
 
-.th-tempuh{
-    text-align: center;
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 0 16px 0 16px;
+  text-decoration: none;
 }
 
-.list-group-item{
-    border: none;
-    background-color: #EEE0C9;
+#fotoDiri {
+  width: 70%
+}
+
+.deskripsi {
+  padding: 10px 0 0 0;
+  font-size: 20px;
+}
+
+.title-section {
+  text-align: center;
+}
+
+#footer-section {
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
+  background: #96B6C5;
+  width: 100%;
+  height: fit-content + 10px;
+  text-align: center;
+}
+
+.list-inline-group {
+  text-align: center;
+  color: white;
+}
+
+th {
+  text-align: center;
+}
+
+.th-tempuh {
+  text-align: center;
+}
+
+.list-group-item {
+  border: none;
+  background-color: #EEE0C9;
 }
 
 .checked {
-    color: orange;
-  }
-@media screen and (max-width: 900px) {
-    
+  color: orange;
 }
+
+@media screen and (max-width: 900px) {}
+
 #foto {
-    width: 350px;
-    height: 200px;
-	margin-bottom: 5px;
+  width: 350px;
+  height: 200px;
+  margin-bottom: 5px;
 }
+
 #foto1 {
-    height: 350px;
-    width: 250px;
-	margin-bottom: 5px;
+  height: 350px;
+  width: 250px;
+  margin-bottom: 5px;
+}
+
+nav {
+  background-color: #ADC4CE;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  /* Ini akan membuat navbar tetap di bagian atas saat digulir ke bawah */
+  z-index: 100;
+  /* Meningkatkan z-index untuk memastikan navbar tetap di atas konten lainnya */
+}
+
+nav div img {
+  width: 50px;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: 'Segoe UI', sans-serif;
+  color: #F1F0E8;
+  font-weight: 600;
+  padding: 8px 0;
+  transition: all;
+  transition-duration: 300ms;
+  border-bottom: 1x solid #F1F0E8;
+}
+
+nav ul li a:hover {
+  color: #526D82;
+}
+
+:root {
+  --background-color: #e3e8ff;
+  --dots-color: #96B6C5;
+}
+
+.gallery {
+  transform: scale(1);
+  padding: 0.5rem;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+}
+
+.slider img {
+  flex: 1 0 100%;
+  object-fit: cover;
+}
+
+.dots {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.dots a {
+  transform: scale(1);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--dots-color);
+  opacity: 0.75;
+  transition: opacity ease 250ms;
+}
+
+.dots a:hover {
+  opacity: 1;
+}
+
+.dots a:active {
+  transform: scale(1.2);
 }
