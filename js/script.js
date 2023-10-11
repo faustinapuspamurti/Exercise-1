@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
 
     "use strict";
 
@@ -6,7 +6,7 @@ $(function() {
      * NAVBAR CLOSE ON CLICK
      *-----------------------------------*/
 
-    $('.navbar-nav > li:not(.dropdown) > a').on('click', function() {
+    $('.navbar-nav > li:not(.dropdown) > a').on('click', function () {
         $('.navbar-collapse').collapse('hide');
     });
 
@@ -21,7 +21,7 @@ $(function() {
         // Remove links that don't actually link to anything
         .not('[href="#"]')
         .not('[href="#0"]')
-        .on('click', function(event) {
+        .on('click', function (event) {
             // On-page links
             if (
                 location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
@@ -36,7 +36,7 @@ $(function() {
                     event.preventDefault();
                     $('html, body').animate({
                         scrollTop: target.offset().top - 40
-                    }, 1000, function() {
+                    }, 1000, function () {
                         // Callback after animation
                         // Must change focus!
                         var $target = $(target);
@@ -66,7 +66,7 @@ $(function() {
     /*-----------------------------------
      * YOUTUBE VIDEO
      *-----------------------------------*/
-    $(".youtube").each(function() {
+    $(".youtube").each(function () {
         // Based on the YouTube ID, we can easily find the thumbnail image
         //  $(this).css('background-image', 'url(https://i.ytimg.com/vi/OPf0YbXqDm0/hqdefault.jpg)');
         // $(this).css('background-size', 'cover');
@@ -77,7 +77,7 @@ $(function() {
 
         var videoId = $(this).data('video-id');
 
-        $(document).on('click', '.youtube', function() {
+        $(document).on('click', '.youtube', function () {
             // Create an iFrame with autoplay set to true
             var iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1&rel=0";
             if ($(this).data('params')) iframe_url += '&' + $(this).data('params');
@@ -94,7 +94,7 @@ $(function() {
     /*-----------------------------------
      * Twitter Widget
      *-----------------------------------*/
-    window.twttr = (function(d, s, id) {
+    window.twttr = (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0],
             t = window.twttr || {};
         if (d.getElementById(id)) return t;
@@ -104,7 +104,7 @@ $(function() {
         fjs.parentNode.insertBefore(js, fjs);
 
         t._e = [];
-        t.ready = function(f) {
+        t.ready = function (f) {
             t._e.push(f);
         };
 
@@ -112,4 +112,29 @@ $(function() {
     }(document, "script", "twitter-wjs"));
 
 });
+const txtElement = ['Selamat Datang di Website Saya!'];
+let count = 0;
+let txtIndex = 0;
+let currentTxt = '';
+let words = '';
+
+(function ngetik() {
+
+    if (count == txtElement.length) {
+        count = 0;
+    }
+
+    currentTxt = txtElement[count];
+
+    words = currentTxt.slice(0, ++txtIndex);
+    document.querySelector('.efek-ngetik').textContent = words;
+
+    if (words.length == currentTxt.length) {
+        count++;
+        txtIndex = 0;
+    }
+
+    setTimeout(ngetik, 500);
+
+})();
 /*End Fn*/
